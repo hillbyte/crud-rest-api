@@ -18,8 +18,8 @@ let startApp = async () => {
   try {
     await connect(DB_URL, {
       useNewUrlParser: true,
-      useFindAndModify: true,
       useUnifiedTopology: true,
+      useFindAndModify: true,
     });
     success({ message: `db connected`, badge: true });
     app.listen(PORT, (err) => {
